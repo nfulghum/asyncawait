@@ -1,21 +1,19 @@
 // Part 1
 // 1-1
 
-let favNum = 23;
+// let favNum = 23;
 
-async function favNumFact(num) {
-    let url = 'http://numbersapi.com';
-    let favPromise = axios.get(`${url}/${num}?json`)
+// async function favNumFact(num) {
+//     let url = 'http://numbersapi.com';
+//     let favPromise = axios.get(`${url}/${num}?json`)
 
-    let fav = await favPromise;
+//     let fav = await favPromise;
 
-    console.log(fav);
-}
-
-
+//     console.log(fav);
+// }
 
 // // 1-2
-// let favNums = [23, 92, 30];
+
 
 // axios.get(`${url}/${favNums}`)
 //     .then(res => {
@@ -33,6 +31,13 @@ async function favNumFact(num) {
 //         console.log(res.data)
 //     })
 //     .catch(err => console.log("rejected", err))
+
+async function favNumsFact() {
+    let baseURL = 'http://numbersapi.com';
+    let favNums = [23, 92, 30];
+    let data = await axios.get(`${baseURL}/${favNums}?json`);
+    console.log(data);
+}
 
 // // 1-3
 
